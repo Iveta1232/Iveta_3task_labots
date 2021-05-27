@@ -178,6 +178,10 @@ const openMenu = () => {
   document.querySelector('header').style.position='relative';
   document.querySelector('main').style.display='none';
   document.querySelector('footer').style.display='none';
+  
+  if (document.title == 'Sapņus atbalsta') {
+    document.getElementById('map').style.display='none';
+  }
 
 }
 
@@ -195,6 +199,10 @@ const closeMenu = () => {
   document.querySelector('header').style.position='fixed';
   document.querySelector('main').style.display='block';
   document.querySelector('footer').style.display='block';
+  
+    if (document.title == 'Sapņus atbalsta') {
+    document.getElementById('map').style.display='block';
+  }
 }
 
 btnBurger.addEventListener('click', openMenu);
